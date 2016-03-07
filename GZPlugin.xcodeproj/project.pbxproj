@@ -1,0 +1,290 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		23E251F01C8DAC1E00812099 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E251EF1C8DAC1E00812099 /* AppKit.framework */; };
+		23E251F21C8DAC1E00812099 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E251F11C8DAC1E00812099 /* Foundation.framework */; };
+		23E251F61C8DAC1E00812099 /* GZPlugin.xcscheme in Resources */ = {isa = PBXBuildFile; fileRef = 23E251F51C8DAC1E00812099 /* GZPlugin.xcscheme */; };
+		23E251F91C8DAC1E00812099 /* GZPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E251F81C8DAC1E00812099 /* GZPlugin.m */; };
+		23E251FC1C8DAC1E00812099 /* NSObject_Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E251FB1C8DAC1E00812099 /* NSObject_Extension.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		23E251EC1C8DAC1E00812099 /* GZPlugin.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GZPlugin.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		23E251EF1C8DAC1E00812099 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		23E251F11C8DAC1E00812099 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		23E251F51C8DAC1E00812099 /* GZPlugin.xcscheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = GZPlugin.xcscheme; path = GZPlugin.xcodeproj/xcshareddata/xcschemes/GZPlugin.xcscheme; sourceTree = SOURCE_ROOT; };
+		23E251F71C8DAC1E00812099 /* GZPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GZPlugin.h; sourceTree = "<group>"; };
+		23E251F81C8DAC1E00812099 /* GZPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GZPlugin.m; sourceTree = "<group>"; };
+		23E251FA1C8DAC1E00812099 /* NSObject_Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSObject_Extension.h; sourceTree = "<group>"; };
+		23E251FB1C8DAC1E00812099 /* NSObject_Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSObject_Extension.m; sourceTree = "<group>"; };
+		23E251FD1C8DAC1E00812099 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		23E251EA1C8DAC1E00812099 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23E251F01C8DAC1E00812099 /* AppKit.framework in Frameworks */,
+				23E251F21C8DAC1E00812099 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		23E251E31C8DAC1E00812099 = {
+			isa = PBXGroup;
+			children = (
+				23E251F31C8DAC1E00812099 /* GZPlugin */,
+				23E251EE1C8DAC1E00812099 /* Frameworks */,
+				23E251ED1C8DAC1E00812099 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		23E251ED1C8DAC1E00812099 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				23E251EC1C8DAC1E00812099 /* GZPlugin.xcplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		23E251EE1C8DAC1E00812099 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				23E251EF1C8DAC1E00812099 /* AppKit.framework */,
+				23E251F11C8DAC1E00812099 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		23E251F31C8DAC1E00812099 /* GZPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				23E251F71C8DAC1E00812099 /* GZPlugin.h */,
+				23E251F81C8DAC1E00812099 /* GZPlugin.m */,
+				23E251FA1C8DAC1E00812099 /* NSObject_Extension.h */,
+				23E251FB1C8DAC1E00812099 /* NSObject_Extension.m */,
+				23E251FD1C8DAC1E00812099 /* Info.plist */,
+				23E251F41C8DAC1E00812099 /* Supporting Files */,
+			);
+			path = GZPlugin;
+			sourceTree = "<group>";
+		};
+		23E251F41C8DAC1E00812099 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				23E251F51C8DAC1E00812099 /* GZPlugin.xcscheme */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		23E251EB1C8DAC1E00812099 /* GZPlugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23E252001C8DAC1E00812099 /* Build configuration list for PBXNativeTarget "GZPlugin" */;
+			buildPhases = (
+				23E251E81C8DAC1E00812099 /* Sources */,
+				23E251E91C8DAC1E00812099 /* Resources */,
+				23E251EA1C8DAC1E00812099 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GZPlugin;
+			productName = GZPlugin;
+			productReference = 23E251EC1C8DAC1E00812099 /* GZPlugin.xcplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		23E251E41C8DAC1E00812099 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = GuZhe;
+				TargetAttributes = {
+					23E251EB1C8DAC1E00812099 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 23E251E71C8DAC1E00812099 /* Build configuration list for PBXProject "GZPlugin" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 23E251E31C8DAC1E00812099;
+			productRefGroup = 23E251ED1C8DAC1E00812099 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				23E251EB1C8DAC1E00812099 /* GZPlugin */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		23E251E91C8DAC1E00812099 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23E251F61C8DAC1E00812099 /* GZPlugin.xcscheme in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		23E251E81C8DAC1E00812099 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23E251F91C8DAC1E00812099 /* GZPlugin.m in Sources */,
+				23E251FC1C8DAC1E00812099 /* NSObject_Extension.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		23E251FE1C8DAC1E00812099 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+			};
+			name = Debug;
+		};
+		23E251FF1C8DAC1E00812099 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+			};
+			name = Release;
+		};
+		23E252011C8DAC1E00812099 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				INFOPLIST_FILE = GZPlugin/Info.plist;
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "N-A.GZPlugin";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Debug;
+		};
+		23E252021C8DAC1E00812099 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				INFOPLIST_FILE = GZPlugin/Info.plist;
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "N-A.GZPlugin";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		23E251E71C8DAC1E00812099 /* Build configuration list for PBXProject "GZPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23E251FE1C8DAC1E00812099 /* Debug */,
+				23E251FF1C8DAC1E00812099 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		23E252001C8DAC1E00812099 /* Build configuration list for PBXNativeTarget "GZPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23E252011C8DAC1E00812099 /* Debug */,
+				23E252021C8DAC1E00812099 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 23E251E41C8DAC1E00812099 /* Project object */;
+}
