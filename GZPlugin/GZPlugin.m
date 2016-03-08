@@ -7,7 +7,6 @@
 //
 
 #import "GZPlugin.h"
-#import "SFDYCIPlugin.h"
 #import "SFDYCIXCodeHelper.h"
 #import "SFDYCIClangProxyRecompiler.h"
 #import "SFDYCIXcodeObjectiveCRecompiler.h"
@@ -48,29 +47,89 @@
     //removeObserver
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NSApplicationDidFinishLaunchingNotification object:nil];
     
-    // Create menu items, initialize UI, etc.
-    // Sample Menu Item:
-    NSMenuItem *menuItem = [[NSApp mainMenu] itemWithTitle:@"Edit"];
-    if (menuItem) {
-        [[menuItem submenu] addItem:[NSMenuItem separatorItem]];
-        NSMenuItem *actionMenuItem = [[NSMenuItem alloc] initWithTitle:@"Do Action" action:@selector(doMenuAction) keyEquivalent:@""];
-        //[actionMenuItem setKeyEquivalentModifierMask:NSAlphaShiftKeyMask | NSControlKeyMask];
-        [actionMenuItem setTarget:self];
-        [[menuItem submenu] addItem:actionMenuItem];
+    NSLog(@"App finished launching");
+    
+    // Selecting Xcode Recompiler first
+    // We'll use Xcode recompiler, and if that one fails, we'll fallback to dyci-recompile.py
+    self.recompiler = [[SFDYCICompositeRecompiler alloc]
+                       initWithCompilers:@[[SFDYCIXcodeObjectiveCRecompiler new], [SFDYCIClangProxyRecompiler new]]];
+    
+    self.viewHelper = [SFDYCIViewsHelper new];
+    
+    self.xcodeStructureManager = [SFDYCIXCodeHelper instance];
+    
+    [self setupMenu];
+    
+    
+    
+}
+- (void)setupMenu {
+    NSMenuItem *runMenuItem = [[NSApp mainMenu] itemWithTitle:@"Product"];
+    if (runMenuItem) {
+        
+        NSMenu *subMenu = [runMenuItem submenu];
+        
+        // Adding separator
+        [subMenu addItem:[NSMenuItem separatorItem]];
+        
+        // Adding inject item
+        NSMenuItem *recompileAndInjectMenuItem = [[NSMenuItem alloc] initWithTitle:@"inject" action:@selector(recompileAndInject:) keyEquivalent:@"x"];
+        [recompileAndInjectMenuItem setKeyEquivalentModifierMask:NSControlKeyMask];
+        [recompileAndInjectMenuItem setTarget:self];
+        
+        [subMenu addItem:recompileAndInjectMenuItem];
+        
+        
     }
 }
 
-// Sample Action, for menu item:
-- (void)doMenuAction
-{
-    NSAlert *alert = [[NSAlert alloc] init];
-    [alert setMessageText:@"Hello, World"];
-    [alert runModal];
+- (void)recompileAndInject:(id)sender {
+    NSDocument<CDRSXcode_IDEEditorDocument> *currentDocument = (NSDocument<CDRSXcode_IDEEditorDocument> *)[self.xcodeStructureManager currentDocument];
+    if ([currentDocument isDocumentEdited]) {
+        [currentDocument saveDocumentWithDelegate:self didSaveSelector:@selector(document:didSave:contextInfo:) contextInfo:nil];
+    } else {
+        [self recompileAndInjectAfterSave:nil];
+    }
+    
 }
 
-- (void)dealloc
-{
+- (void)document:(NSDocument *)document didSave:(BOOL)didSaveSuccessfully contextInfo:(void *)contextInfo {
+    [self recompileAndInjectAfterSave:nil];
+}
+
+
+- (void)recompileAndInjectAfterSave:(id)sender {
+    DYCI_CCPXCodeConsole * console = [DYCI_CCPXCodeConsole consoleForKeyWindow];
+    [console log:@"Starting Injection"];
+    __weak typeof(self) weakSelf = self;
+    
+    
+    NSURL *openedFileURL = self.xcodeStructureManager.activeDocumentFileURL;
+    
+    if (openedFileURL) {
+        
+        [console log:[NSString stringWithFormat:@"Injecting %@(%@)", openedFileURL.lastPathComponent, openedFileURL]];
+        
+        [self.recompiler recompileFileAtURL:openedFileURL completion:^(NSError *error) {
+            if (error) {
+                [weakSelf.viewHelper showError:error];
+                [console error:[NSString stringWithFormat:@"Recompilation failed %@", error]];
+            } else {
+                [weakSelf.viewHelper showSuccessResult];
+                [console log:@"Recompilation was successful"];
+            }
+        }];
+        
+    } else {
+        [console error:[NSString stringWithFormat:@"Cannot inject this file right now. If you think that this file is injectable, try again bit later"]];
+    }
+}
+
+#pragma mark - Dealloc
+
+- (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
+
 
 @end

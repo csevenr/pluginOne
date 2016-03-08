@@ -23,7 +23,6 @@
 		23E252481C8E6DAA00812099 /* DYCI_CCPShellRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E252421C8E6DAA00812099 /* DYCI_CCPShellRunner.m */; };
 		23E252491C8E6DAA00812099 /* DYCI_CCPXCodeConsole.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E252441C8E6DAA00812099 /* DYCI_CCPXCodeConsole.m */; };
 		23E2524E1C8E6DB900812099 /* SFDYCIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E2524D1C8E6DB900812099 /* SFDYCIHelper.m */; };
-		23E252511C8E6DF000812099 /* SFDYCIPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E252501C8E6DF000812099 /* SFDYCIPlugin.m */; };
 		23E252561C8E6DF900812099 /* SFDYCIResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E252531C8E6DF900812099 /* SFDYCIResultView.m */; };
 		23E252571C8E6DF900812099 /* SFDYCIViewsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E252551C8E6DF900812099 /* SFDYCIViewsHelper.m */; };
 		23E2525B1C8E6E9E00812099 /* SFDYCIXCodeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E2525A1C8E6E9E00812099 /* SFDYCIXCodeHelper.m */; };
@@ -63,8 +62,6 @@
 		23E2524B1C8E6DB900812099 /* CDRSXcodeInterfaces.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDRSXcodeInterfaces.h; path = Xcode/CDRSXcodeInterfaces.h; sourceTree = "<group>"; };
 		23E2524C1C8E6DB900812099 /* SFDYCIHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFDYCIHelper.h; path = Xcode/SFDYCIHelper.h; sourceTree = "<group>"; };
 		23E2524D1C8E6DB900812099 /* SFDYCIHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFDYCIHelper.m; path = Xcode/SFDYCIHelper.m; sourceTree = "<group>"; };
-		23E2524F1C8E6DF000812099 /* SFDYCIPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFDYCIPlugin.h; path = Plugin/SFDYCIPlugin.h; sourceTree = "<group>"; };
-		23E252501C8E6DF000812099 /* SFDYCIPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFDYCIPlugin.m; path = Plugin/SFDYCIPlugin.m; sourceTree = "<group>"; };
 		23E252521C8E6DF900812099 /* SFDYCIResultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFDYCIResultView.h; path = Plugin/Views/SFDYCIResultView.h; sourceTree = "<group>"; };
 		23E252531C8E6DF900812099 /* SFDYCIResultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFDYCIResultView.m; path = Plugin/Views/SFDYCIResultView.m; sourceTree = "<group>"; };
 		23E252541C8E6DF900812099 /* SFDYCIViewsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFDYCIViewsHelper.h; path = Plugin/Views/SFDYCIViewsHelper.h; sourceTree = "<group>"; };
@@ -166,8 +163,6 @@
 				23E252531C8E6DF900812099 /* SFDYCIResultView.m */,
 				23E252541C8E6DF900812099 /* SFDYCIViewsHelper.h */,
 				23E252551C8E6DF900812099 /* SFDYCIViewsHelper.m */,
-				23E2524F1C8E6DF000812099 /* SFDYCIPlugin.h */,
-				23E252501C8E6DF000812099 /* SFDYCIPlugin.m */,
 				23E2523F1C8E6DAA00812099 /* DYCI_CCPRunOperation.h */,
 				23E252401C8E6DAA00812099 /* DYCI_CCPRunOperation.m */,
 				23E252411C8E6DAA00812099 /* DYCI_CCPShellRunner.h */,
@@ -288,7 +283,6 @@
 				23E251F91C8DAC1E00812099 /* GZPlugin.m in Sources */,
 				23E251FC1C8DAC1E00812099 /* NSObject_Extension.m in Sources */,
 				23E252491C8E6DAA00812099 /* DYCI_CCPXCodeConsole.m in Sources */,
-				23E252511C8E6DF000812099 /* SFDYCIPlugin.m in Sources */,
 				23E252471C8E6DAA00812099 /* DYCI_CCPRunOperation.m in Sources */,
 				23E2523E1C8E6D9E00812099 /* SFDYCIXcodeObjectiveCRecompiler.m in Sources */,
 			);
@@ -419,6 +413,7 @@
 				23E252021C8DAC1E00812099 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
