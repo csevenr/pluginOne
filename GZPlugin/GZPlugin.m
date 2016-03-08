@@ -16,6 +16,7 @@
 #import "DYCI_CCPXCodeConsole.h"
 
 @interface GZPlugin()
+//
 @property (nonatomic, strong, readwrite) NSBundle *bundle;
 @property(nonatomic, strong) id <SFDYCIRecompilerProtocol> recompiler;
 @property(nonatomic, strong) SFDYCIViewsHelper *viewHelper;
