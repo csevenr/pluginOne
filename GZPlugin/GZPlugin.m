@@ -7,10 +7,20 @@
 //
 
 #import "GZPlugin.h"
+#import "SFDYCIPlugin.h"
+#import "SFDYCIXCodeHelper.h"
+#import "SFDYCIClangProxyRecompiler.h"
+#import "SFDYCIXcodeObjectiveCRecompiler.h"
+#import "SFDYCIViewsHelper.h"
+#import "SFDYCICompositeRecompiler.h"
+#import "DYCI_CCPXCodeConsole.h"
 
 @interface GZPlugin()
 
 @property (nonatomic, strong, readwrite) NSBundle *bundle;
+@property(nonatomic, strong) id <SFDYCIRecompilerProtocol> recompiler;
+@property(nonatomic, strong) SFDYCIViewsHelper *viewHelper;
+@property(nonatomic, strong) SFDYCIXCodeHelper *xcodeStructureManager;
 @end
 
 @implementation GZPlugin
